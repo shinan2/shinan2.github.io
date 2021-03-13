@@ -73,6 +73,8 @@ body {
 nav a {
     display: inline-block;
     padding: 1.25rem 2rem;
+    font-size: 1.75rem;
+
 }
 
 nav {
