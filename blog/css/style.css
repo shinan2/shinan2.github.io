@@ -1,0 +1,210 @@
+/* TO GET AN IDEA OF THE CSS YOU WILL LIKELY BE USING, SEE THE LISTS BELOW. */
+
+        /* 
+        
+        Spacing 
+
+            - padding (shorthand and/or specific properties like padding-bottom, etc.)
+
+            - margin, (shorthand and/or specific properties like margin-top, etc.)
+
+            - letter-spacing, word-spacing, line-height
+
+            - width, max-width, min-width
+            - height, max-height, min-height
+
+        Typography 
+
+            - font-family, font-size, font-style, font-weight
+
+            - text-decoration, text-align
+
+            - color
+
+            - text-shadow, text-transform
+
+        Box, Layout and Border 
+
+            - border (shorthand and/or specific properties like border-top, border-bottom-radius, border-width, etc.)
+
+            - box-shadow
+
+            - display, float, align-items, align-content
+
+            - grid-template-columns, grid-column-gap
+
+            - transform
+
+        Other
+
+            - :nth()-child (to target specific child elements)
+
+            - :focus, :hover, :active (to target link states)
+
+            - @font-face or @import (to import typefaces)
+
+        */
+
+
+/* ------ START WRITING YOUR CODE BELOW ------ */
+
+/* General Setup */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size:16px;
+}
+
+body {
+    font-family: Lato, Arial, sans-serif;
+    font-size:1rem;
+    margin: 1.5rem auto;
+    width:90%;
+    min-width:56.25rem;
+    background-color: black;
+}
+
+
+/* Links and Navigation */
+
+nav a {
+    display: inline-block;
+    padding: 1.25rem 2rem;
+}
+
+nav {
+    border-top: 1px solid #F2A341;
+    border-bottom: 1px solid #F2A341;
+}
+
+nav a:focus, a:hover {
+    color: black;
+    background-color: #6BAE81;
+}
+
+nav a:active {
+    color: whitesmoke;
+    background-color: #000000;
+}
+/* Link Styling */
+
+a {
+    text-decoration: none;
+    outline: none;
+}
+
+a:link, a:visited {
+    color: #6E2600;
+}
+
+a:focus, a:hover {
+    text-decoration: none;
+}
+
+a:hover {
+    text-transform: uppercase; 
+}
+
+/* Layout */
+
+.main-section {
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    grid-gap: 20px;
+}
+
+article {
+    grid-column: 1 / 2;
+    grid-row: 1;
+}
+
+aside {
+    grid-column: 2 / 4;
+    grid-row: 1;
+    border-left: 1px solid #F2A341;
+    padding-left: 1rem;
+}
+
+.subsection {
+    display: flex;
+}
+
+/* Image and Figures */
+
+img {
+    width: 100%;
+}
+
+.article-image {
+    width: 33%;
+    float: left;
+    margin-right: 1rem;
+}
+
+/*Import Typfaces*/
+
+@font-face {
+    font-family:Lato;
+    src: url(../fonts/lato-regular.ttf);
+    font-style:normal;
+    font-weight:normal;
+}
+
+
+@font-face {
+    font-family: "montserrat";
+    src: url("../fonts/montserrat-regular.ttf") format('truetype');
+    font-weight: normal;
+    font-style: normal;     
+}
+
+
+/* Main Section Typography */
+
+/* Headings */
+
+h1 {
+    font-size: 3rem;
+    margin: 0;
+    color: whitesmoke;
+    text-shadow:.09375rem .09375rem .09375rem darkgrey;
+    padding-bottom: 4rem;
+    padding-top: 2rem;
+    text-align: center;
+    letter-spacing: 0.03125rem;
+    word-spacing: 0.05rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+    color: whitesmoke;
+    letter-spacing: 0.03125rem;
+    word-spacing: 0.05rem;
+}
+
+h3 {
+    font-size: 1.25rem;
+    color: whitesmoke;
+    letter-spacing: 0.03125rem;
+    word-spacing: 0.05rem;
+}
+
+/*Paragraphs*/
+
+p {
+    text-align: left;
+    color: whitesmoke;
+    letter-spacing: 0.03125rem;
+    word-spacing: 0.0125rem;
+    line-height: 1.45rem;
+}
+
+/*Aside Typography */
+
+aside {
+    font-size: 0.75rem;
+
+}
